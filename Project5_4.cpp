@@ -26,13 +26,13 @@ int main()
 	{
 		swapped = false;
 
-		for (int j = 0; j < 10 - i - 1; j++)
+		for (int j = 10 - 1; j > i; --j)
 		{
-			if (mus[j] > mus[j + 1])
+			if (mus[j] < mus[j - 1])
 			{
 				int temporary{ mus[j] };
-				mus[j] = mus[j + 1];
-				mus[j + 1] = temporary;
+				mus[j] = mus[j - 1];
+				mus[j - 1] = temporary;
 
 				swapped = true;
 			}
